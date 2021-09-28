@@ -1,11 +1,11 @@
 param(
-    [Parameter(Mandatory=$false)]
+    [Parameter(Mandatory=$true)]
     [Int32]$number
 )
 $result = $number % 2
 if($result -eq 1){
-    Write-Host "$number is odd number" -ForegroundColor Red
+    Write-Output "$number is odd number"
 }
 elseif($result -eq 0){
-    Write-Host "$number is an even number" -ForegroundColor Green
+    Write-Output "$number is an even number"
 }
